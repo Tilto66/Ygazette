@@ -190,6 +190,12 @@ p {
   max-width: 90%;     
   color: white;       
 }
+.img{
+    background-image: url(art1/img1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
 /*=============================================*/
 /*                  id                         */
 /*=============================================*/
