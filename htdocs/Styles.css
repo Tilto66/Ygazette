@@ -1,0 +1,220 @@
+p {
+  margin-bottom: 1em;
+}
+.flou{
+    filter: blur(15px);
+    pointer-events: none;
+}
+.principale {
+    text-decoration: none;
+    padding: 20px 30px;
+    background-color: #1b0f38;
+    color: #ffffff;
+    display: inline-flex;
+    height: 15px;
+    margin-left: -5px;
+    font-size: 200%;
+    align-items: center;
+    font-family: Comic Sans MS, Arial, sans-serif;
+}
+/* Bouton menu fixe à gauche */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 10px;
+  z-index: 1000;
+  height: 80px;           /* même hauteur que les liens */
+  padding: 0 20px;
+  font-size: 45px;
+  border-radius: 10px;
+  background-color: #1b0f38;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Conteneur du menu (bande horizontale) */
+.menu-links {
+  position: fixed;
+  top: 20px;              /* aligné avec le bouton */
+  left: 0;                 /* départ hors écran à gauche */
+  display: flex;           /* bande horizontale */
+  gap: 5px;                /* petite marge entre les liens */
+  z-index: 999;
+  transform: translateX(-100%); /* hors écran au départ */
+  transition: transform 0.5s ease;
+}
+
+/* Menu visible : plus à droite pour ne pas toucher le bouton */
+.menu-links.show {
+  transform: translateX(calc(130px + 80px)); 
+  /* 10px = left du bouton, 80px = largeur approximative du bouton + marge */
+}
+
+/* Liens principale alignés comme le bouton */
+.menu-links .principale {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;          /* même hauteur que le bouton */
+  padding: 0 25px;       /* plus de largeur pour que seuls les coins se touchent */
+  background-color: #1b0f38;
+  color: white;
+  text-decoration: none;
+  font-size: 45px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.menu-links .principale:hover {
+  background-color: #0a7024;
+}
+
+.couleur{
+    color: #ffffff;
+    font-size: 170%;
+}
+.decoration{
+    color: #ffffff;
+    text-decoration: none;
+}
+.bouton_plth{
+    display: inline-block;
+    text-align: center;
+    border: 2px solid white;
+    text-decoration: none;
+    color: transparent;
+    background-color: #0000FF;
+    border-radius: 30px;
+    height: 60px ;
+    width: 10px;
+    font-size: 40px;
+    transition: background-color 2s, color 2s, width 2s;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.bouton_plth:hover{
+    color: #f7f705;
+    background-color: black;
+    width: 670px;
+}
+.bouton_num{
+    display: inline-block;
+    border: 2px solid white;
+    text-decoration: none;
+    text-align: center;
+    color: transparent;
+    background-color: #77ff0f;
+    border-radius: 30px;
+    white-space: nowrap;
+    width: 10px;
+    height: 60px;
+    font-size: 40px;
+    cursor: pointer;  
+    transition: background-color 2s, color 2s, width 2s; 
+}
+.bouton_num:hover{
+    color: #f7f705;
+    background-color: black;
+    width: 350px; 
+     
+}
+.bouton_cook{
+    display: inline-block;
+    border: 2px solid white;
+    text-decoration: none;
+    text-align: center;
+    color: transparent;
+    background-color: #e34245;
+    border-radius: 30px;
+    white-space: nowrap;
+    width: 10px;
+    height: 60px;
+    font-size: 40px;
+    cursor: pointer;  
+    transition: background-color 2s, color 2s, width 2s; 
+}
+.bouton_cook:hover{
+    color: #f7f705;
+    background-color: black;
+    width: 400px;     
+}
+.titre_pgph{
+    text-decoration: underline;
+    font-size: 50px;
+    color: #ffffff;
+}
+ 
+.acouleur{
+    color: #ffffff;
+    font-size: 110%;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+.acouleur:hover{
+    color: #0b9645;
+}
+.footer{
+  color: #ffffff;  
+  text-decoration: none;
+  transition: color 0.5s;
+}
+.footer:hover{
+    color: #0b9645;
+    text-decoration: underline;
+}
+.liste{
+    white-space: nowrap;
+}
+    .popup {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5); 
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      backdrop-filter: blur(2px);
+      display: none;
+    }
+
+.popup-contenu {
+  background: #1E1E2F; 
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px black;
+  text-align: center;
+  width: 800px;       
+  max-width: 90%;     
+  color: white;       
+}
+/*=============================================*/
+/*                  id                         */
+/*=============================================*/
+#titre_ombre{
+    text-shadow: -50px 50px 3px #b8b4ab;
+    transition: text-shadow 2s;
+}
+#titre_ombre:hover{
+    text-shadow: none;
+}
+#ombre_noir{
+    text-shadow: 5px 5px 5px black;
+}
+#searchBar {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    width: 50%;
+    text-align: center;
+    background-color: #d1d1d1;
+    color: black;
+}
+#searchBar::placeholder {
+    color: #757171;
+}
