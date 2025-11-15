@@ -46,6 +46,7 @@ https://yjournal.great-site.net/article/déjà_paru.html
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
+<!--sources-->
 <url>
   <loc>https://yjournal.great-site.net/sources.html</loc>
   <lastmod>2025-11-15</lastmod>
